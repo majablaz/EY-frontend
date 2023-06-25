@@ -1,0 +1,261 @@
+///////////////
+// TYPOGRAPHY
+%heading {
+    font-family: $font-family;
+    font-weight: 400;
+}
+
+h1{
+    @extend %heading;
+    font-size: 2.875rem;
+    font-weight: 400;
+    letter-spacing: 0.016rem;
+    line-height: 1.15;
+    
+    @media only screen and (min-width: $bp-medium) {
+        font-size: 3.625rem;
+    }
+}
+h2{
+    @extend %heading;
+    font-size: 2.25rem;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+
+    &.h2__big{
+        color: #2B2B2B;
+        font-size: 52px;
+        letter-spacing: 0.231px;
+    }
+}
+
+h4{
+    @extend %heading; 
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.heading-light{
+    color: $color-text-light;
+}
+
+p{
+    font-size: 1.25rem;
+    line-height: 1.5;
+    letter-spacing: 0.005rem;
+}
+
+
+
+///////////////
+// SLIDER
+
+.slider {
+    position: relative;
+    max-width: 100%; 
+    //height: 27.19rem; 
+    
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+
+    &__slides{
+        position: relative;
+        height: 197px;
+
+        @media only screen and (min-width: $bp-medium) {
+            height: 27.8rem;
+        }
+    }
+
+    .slider__item{
+    position: absolute;
+    width: 100%;
+    top:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+    height: 100%;
+    left:0;
+    max-width: 100%;
+    @media only screen and (min-width: $bp-medium) {
+        left:25%;
+        width: 50%;
+        max-width: 50%;
+        padding: 0 1rem;
+    }
+    /*   */
+    }
+    .slider__item > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    &__buttons{
+        margin-top: 43px;
+        display: flex;
+        justify-content: space-around;
+        @media only screen and (min-width: $bp-medium) {
+            justify-content: center;
+    gap: 15rem;
+        }
+
+
+        
+    }
+    .btn-slide{
+        height: 26px;
+        width: 37px;
+    
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+     
+        &:hover{
+            transform: scale(1.1);
+        }
+        &:active{
+            transform: scale(0.8);
+        }
+    }
+    .slide-prev{
+    background-image: url(../img/arrow-left.svg);
+    }
+    .slide-next{
+        background-image: url(../img/arrow-right.svg);
+    }
+}
+
+
+///////////////
+// MODAL
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: zoom 0.3s ease-in-out;
+    z-index: 11;
+    
+    @keyframes zoom {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    &__overlay{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        background-color: rgba(225, 225, 225, 0.95);
+    }
+
+    img{
+        border-radius: 10px;
+    }
+
+    .closeBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 20px;
+        cursor: pointer;
+        transition: transform 0.3s;
+            width:30px;
+            height: 30px;
+
+        &:after {
+            content: '';
+            height: 30px;
+            border-left: 2px solid #111111;
+            position: absolute;
+            transform: rotate(45deg);
+        }
+        
+        &:before {
+            content: '';
+            height: 30px;
+            border-left: 2px solid #111111;
+            position: absolute;
+            transform: rotate(-45deg);
+        }
+    }
+    .modal__next, .modal__prev{
+        height: 25px;
+        width: 25px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .closeBtn:hover, .modal__next:hover, .modal__prev:hover{
+        transform: scale(1.1);
+    }
+    .closeBtn:active, .modal__next:active, .modal__prev:active{
+        transform: scale(0.8);
+    }
+    .modal__next{
+        background-image: url(../img/arrow-right.svg);
+    }
+    .modal__prev{
+        background-image: url(../img/arrow-left.svg);
+    }
+}
+
+
+
+///////////////
+// MODAL FORM
+
+.modal__form{
+    height: auto;
+    bottom: 0;
+    padding: 1rem;
+    top: auto;
+    background-color: $color-success;
+    box-shadow: 0.2rem 0rem 1rem 0 rgba(0,0,0,0.3);
+}
+
+
+
+.btn{
+    display: inline-block;
+    border-radius: 0.5rem;
+    background-color: $color-bg-dark;
+    color: $color-text-light;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+    padding: 0.2rem 0.5rem;
+    border: none;
+    transform: scale(1);
+    transition: all .3s;
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0.4rem 0.4rem 0.7rem 0 rgba(0,0,0,0.2);
+    }
+    &:active{
+        transform: scale(0.95);
+        box-shadow: 0.1rem 0.1rem 0.5rem 0 rgba(0,0,0,.2);
+    }
+
+    &--big{
+        font-size: 20px;
+        padding: 0.5rem 0.8rem;
+    }
+}

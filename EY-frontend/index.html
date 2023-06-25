@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Daily pet facts - Love</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- <meta name="description" content="" /> -->
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.min.css">
+
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="headline">
+            &nbsp;
+        </div>
+        <section class="facts">
+            <h1>Daily pet facts - Love!</h1>
+            <div class="facts__item facts__item-cat">
+                <img src="img/meow.jpg" alt="Cat" class="facts__img">
+                <div class="facts__text">
+                    <h2>The cat</h2>
+                    <p>Cats have been domesticated for around 4,000 years. While they were once valued for their hunting abilities, they are now valued for their companionship and loving behaviour.</p>
+                    <p>While not well known, the collective nouns used for cats and kittens are a clowder of cats and a kindle of kittens.</p>
+                    <p>Our domestic cats are known as little cats. They differ from large cats such as lions and tigers because they are naturally active at night and can purr.</p>
+                    <p>Cats are now the most popular pet in the UK and in the US.</p>
+                </div>
+            </div>
+            <div class="facts__item facts__item-dog">
+                <img src="img/woof.jpg" alt="Dog" class="facts__img facts__img-dog">
+                <div class="facts__text facts__text-dog">
+                    <h2>The dog</h2>
+                    <p>Domestic dogs have been companions to people for more than 15,000 years. There are more than 400 different breeds of dogs. PAWS or your local animal shelter has a wide variety of breeds available for adoption. The most popular types are the non-pedigree. They are extra special because they are one-of-a-kind!</p>
+                    <p>In general, small dogs live longer than large dogs. Small dogs such as terriers may live 20 years. Giant dogs like Great Danes may live eight years. The average lifespan for a mixed breed dog is 13 to 14 years. By making sure dogs have good food, regular veterinary care, shelter and a loving family, they will live longer, healthier lives.</p>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2 class="h2__big">Gallery</h2>
+            <div class="slider">
+                <div class="slider__slides">
+
+                    <div class="slider__item">
+                        <img src="img/hot_dog.jpg" alt="Photo1"/>
+                    </div>
+                    <div class="slider__item">
+                        <img src="img/labrador.jpg" alt="Photo3"/>
+                    </div> 
+                    <div class="slider__item">
+                        <img src="img/collie.jpg" alt="Photo2"/>
+                    </div>
+                    <div class="slider__item">
+                        <img src="img/labrador.jpg"/>
+                    </div> 
+                </div>
+                <div class="slider__buttons">
+                    <div class="btn-slide slide-prev"></div>
+                    <div class="btn-slide slide-next"></div>
+
+                </div>
+            </div>
+
+            <div class="gallery__items">
+                <img src="img/img_1.jpg" alt="cat">
+                <img src="img/img_2.jpg" alt="cat">
+                <img src="img/img_3.jpg" alt="cat">
+                <img src="img/img_4.jpg" alt="cat">
+                <img src="img/img_5.jpg" alt="cat">
+                <img src="img/img_6.jpg" alt="cat">
+                <img src="img/img_7.jpg" alt="cat">
+                <img src="img/img_8.jpg" alt="cat">
+            </div>
+        </section>
+        <div class="form">
+            <h2 class="h2__big">Sign up</h2>
+            <form action="#" id='form'>
+                <div class="form__group">
+                    <label for="name" class="form__label">Name: </label>
+                    <input type="text" class="form__input"id="name" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label">Email: </label>
+                    <input type="email" class="form__input" id="email" required>
+                </div>
+                <div class="form__group"> 
+                    <label for="animal" class="form__label">Favorite pet:</label>
+                    <select name="animal"  class="form__input" id="animal" required>
+                        <option selected="selected" disabled="disabled" value=""></option>
+                        <option value="dog">dog</option>
+                        <option value="cat">cat</option>
+                        <option value="hamster">hamster</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <input type="submit" value="Send" class="btn btn--big">
+                </div>
+            </form> 
+        </div>
+        <footer class="footer">
+            <div class="footer__links">
+                <ul>
+                    <li><h4 class="heading-light">Pet-facts.com</h4></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul>
+                    <li><h4 class="heading-light">Our brands</h4></li>
+                    <li><a href="#">Supercoat</a></li>
+                    <li><a href="#">Fancy Feast</a></li>
+                    <li><a href="#">Pro Plan</a></li>
+                    <li><a href="#">Beyond</a></li>
+                </ul>
+                <ul>
+                    <li><h4 class="heading-light">Contact us</h4></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Terms &amp; conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer__copy">
+                <p>Copyright is a legal right, existing in many countries, that grants the creator of an original work exclusive rights to determine whether, and under what conditions, this original work may be used by others.</p>
+            </div>
+        </footer>
+    </body>
+</html>
